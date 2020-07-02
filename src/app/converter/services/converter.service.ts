@@ -30,7 +30,7 @@ export class ConverterService {
       return 0;
     }
 
-    return (1 / conversionResponse.rates[conversion.currencyFrom].toFixed(4));
+    return (1 / conversionResponse.rates[conversion.currencyTo].toFixed(4));
   }
 
   priceDate(conversionResponse: ConversionResponse): string {
