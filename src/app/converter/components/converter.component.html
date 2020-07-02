@@ -9,7 +9,7 @@
 	<div class="panel-body text-center">
 		<form #conversionForm="ngForm" class="form-inline">
 			<input type="text" name="valor" class="form-control text-right" placeholder="0"
-				[(ngModel)]="conversion.value" required>
+				[(ngModel)]="conversion.value" appNumber required>
 			<select name="currencyFrom" class="form-control" [(ngModel)]="conversion.currencyFrom" required>
 				<option *ngFor="let currency of currencies" [value]="currency.name">
 					{{ currency.name }} - {{ currency.description }}
@@ -23,6 +23,8 @@
 			</select>
 			<input type="submit" value="Convert" class="btn btn-success" data-toggle="modal" data-target="#modalPrice"
 				(click)="convert()" [disabled]="!conversionForm.form.valid">
+
+				{{conversionResponse | json}}
 		</form>
 	</div>
 </div>

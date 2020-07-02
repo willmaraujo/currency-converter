@@ -34,7 +34,11 @@ export class ConverterComponent implements OnInit {
 
   convert(): void {
     if (this.conversionForm.form.valid) {
-      alert('Converting: ' + JSON.stringify(this.conversion));
+      this.converterService.convert(this.conversion)
+        .subscribe(
+          response => this.conversionResponse = response,
+          error => this.hasError = true
+        );
     }
   }
 
