@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'currency-converter'`, () => {
+  it(`should have as title 'Currency Converter'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('currency-converter');
+    expect(app.title).toEqual('Currency Converter');
   });
 
   it('should render title', () => {
