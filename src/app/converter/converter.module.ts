@@ -7,9 +7,10 @@ import { ConverterComponent } from './components/converter.component';
 import { CurrencyService, ConverterService } from './services';
 import { NumberDirective } from './directives';
 import { ModalPriceComponent } from './utils';
+import { DateBrPipe } from './pipes/date-br.pipe';
 
 @NgModule({
-  declarations: [ConverterComponent, NumberDirective, ModalPriceComponent],
+  declarations: [ConverterComponent, NumberDirective, ModalPriceComponent, DateBrPipe],
   imports: [
     CommonModule,
     HttpClientModule,
